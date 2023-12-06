@@ -8,7 +8,8 @@ public class Trebuchet{
         Integer sum = 0;
         ArrayList<String> lines = new ArrayList<String>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("input.txt"))) {
+        //Loads the input values from input.txt into ArrayList
+        try (BufferedReader br = new BufferedReader(new FileReader("../input.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 lines.add(line);
@@ -18,8 +19,7 @@ public class Trebuchet{
 			e.printStackTrace();
         }
 
-        System.out.println(lines.get(0).length());
-
+        //Sums the first and last digit from each line
         ArrayList<Integer> numInLines = new ArrayList<Integer>();
         for(int i = 0; i < lines.size(); i++){
             ArrayList<Integer> numInLine = new ArrayList<Integer>();
